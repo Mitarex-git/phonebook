@@ -11,31 +11,31 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Введите имя контакта:" );
+        System.out.println( "Р’РІРµРґРёС‚Рµ РёРјСЏ РєРѕРЅС‚Р°РєС‚Р°:" );
         String input = System.console().readLine();
         HashMap<String,ArrayList<String>> phoneBook =
                 new HashMap<String, ArrayList<String>>();
         ArrayList<String> tempList = new ArrayList<String>();
         tempList.add("+8 800 2000 500");
         tempList.add("+8 800 200 600");
-        phoneBook.put("Иванов И.И.", tempList);
+        phoneBook.put("РРІР°РЅРѕРІ Р.Р.", tempList);
         tempList = new ArrayList<String>();
         tempList.add("+8 800 2000 700");
-        phoneBook.put("Петров П.П.", tempList);
+        phoneBook.put("РџРµС‚СЂРѕРІ Рџ.Рџ.", tempList);
         tempList = new ArrayList<String>();
         tempList.add("+8 800 2000 800");
         tempList.add("+8 800 2000 900");
         tempList.add("+8 800 2000 000");
-        phoneBook.put("Сидоров С.С.", tempList);
+        phoneBook.put("РЎРёРґРѕСЂРѕРІ РЎ.РЎ.", tempList);
         if (phoneBook.containsKey(input))
         {
-            System.out.println("Список номеров, принадлежащих " + input + ":");
+            System.out.println("РЎРїРёСЃРѕРє РЅРѕРјРµСЂРѕРІ, РїСЂРёРЅР°РґР»РµР¶Р°С‰РёС… " + input + ":");
             for (String phoneNumber : phoneBook.get(input))
             {
                 System.out.println(phoneNumber);
             }
         }
         else
-            System.out.println("Контакт не найден.");
+            System.out.println("РљРѕРЅС‚Р°РєС‚ РЅРµ РЅР°Р№РґРµРЅ.");
     }
 }
